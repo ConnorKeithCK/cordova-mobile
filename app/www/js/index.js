@@ -16,6 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var playButton = document.getElementById("play-button");
+var gameMenu = document.getElementById("menu-container");
+var ingame = document.getElementById("game");
+var userSubmit = document.getElementById("guessForm");
+var userGuess = document.getElementById("guess");
+let game;
+let numberOfGuesses = 0;
+let userNumber;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -31,16 +41,34 @@ var app = {
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
 };
+
+playButton.addEventListener("click", function(clickEvent) {
+
+    gameMenu.className = "hidden";
+    ingame.className = "";
+    game = new RandomNumberGame();
+
+});
+
+guessForm.addEventListener("submit", function(submitEvent) {
+
+    submitEvent.preventDefault();
+    userNumber = userGuess.value;
+    console.log(userNumber);
+    userNumber = "";
+
+});
+
+class RandomNumberGame {
+
+    number;
+
+    constructor() {
+        this.number = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+        console.log(this.number);
+    }
+
+}
 
 app.initialize();

@@ -37,7 +37,7 @@
     </head>
     <body>
         <h1 class = "title">Random number guessing game!</h1>
-        <div class = "menu-container">
+        <div class = "menu-container" id = "menu-container">
             <div class = "instructions-container">
                     <h2 class = "instructions">How to play</h2>
                     <ol class = "instructions-list">
@@ -48,6 +48,14 @@
                     </ol>
             </div>
             <button id = "play-button">PLAY</button>
+        </div>
+
+        <div class = "hidden" id = "game">
+            <form id = "guessForm">
+                <label id = "guessForm-label">Enter your guess:</label>
+                <input type = "text" id = "guessForm-input">
+                <input id = "guessForm-submit" type = "submit" value = "Guess!">
+            </form>
         </div>
 
         <script type="text/javascript" src="cordova.js"></script>

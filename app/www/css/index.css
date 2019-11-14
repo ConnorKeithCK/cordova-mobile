@@ -44,10 +44,6 @@
     order: 2;
 }
 
-#play-button:hover {
-    background-color: blue;
-}
-
 body {
     margin: 0;
     width: 100%;
@@ -56,4 +52,27 @@ body {
 
 .hidden {
     display: none;
+}
+
+
+.game {
+    display: flex;
+    justify-content: center;
+}
+
+#guessForm-label {
+    flex: 1;
+    order: 1;
+}
+
+#guessForm-input {
+    flex: 2;
+    order: 2;
+}
+
+#guessForm-submit {
+    flex: 2;
+    order: 3;
+    background-color: green;
+    border: none;
 }

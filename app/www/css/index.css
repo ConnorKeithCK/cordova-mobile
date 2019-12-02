@@ -75,6 +75,8 @@ a
     justify-self: center;
     text-align: center;
     margin-bottom: 1em;
+    border: 1px solid black;
+
 }
 
 #guessForm-submit {
@@ -84,4 +86,5 @@ a
     border: none;
     font-size: 3em;
     margin-bottom: 1em;
+    margin-top: 1em;
 }

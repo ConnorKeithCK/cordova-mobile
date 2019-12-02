@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "cordova.mobile"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "cordova.mobile"
     }
   },
   "dependent_plugins": {}

@@ -37,6 +37,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+        navigator.vibrate(2000);
         this.receivedEvent('deviceready');
     },
 
@@ -46,7 +47,7 @@ var app = {
 playButton.addEventListener("click", function(clickEvent) {
 
     gameMenu.className = "hidden";
-    ingame.className = "";
+    ingame.className = "game";
     game = new RandomNumberGame();
 
 });
@@ -59,6 +60,7 @@ guessForm.addEventListener("submit", function(submitEvent) {
         if (userGuess.value >= 1 && userGuess.value <= 10) {
             userNumber = userGuess.value;
             if (userNumber == game.number) {
+                navigator.vibrate(4000);
                 alert("You won! You guessed the correct number in " + numberOfGuesses + " guesses!");
                 if (confirm("Would you like to play again?")) {
                     game = new RandomNumberGame();
